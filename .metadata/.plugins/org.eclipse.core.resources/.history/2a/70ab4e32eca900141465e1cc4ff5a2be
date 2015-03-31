@@ -1,0 +1,58 @@
+package taxx;
+/**
+ * This class should calculate the tax on an item
+ * sold to somewhere on Yoshi's Island. On Yoshi's
+ * Island, the tax rate is 7% (0.07) plus a flat
+ * rate of one dollar (1.00) for every item that
+ * costs one hundred dollars (100.0) or more.
+ * 
+ * You MUST extend TaxCalculator to get credit. You
+ * must use the taxRate variable in the superclass
+ * and call the super class constructor.
+ 
+ */
+public class YoshiIslandTaxCalculator extends TaxCalculator{
+	
+	public YoshiIslandTaxCalculator() {
+		super(0.07);
+	
+	}
+
+	public double calculateTax(double originalAmount)
+	{
+		double taxRate;
+		taxRate=getTaxRate();
+		if(originalAmount<=100){
+			return ((originalAmount*taxRate)+1);
+		}
+		else{return originalAmount * taxRate;}
+		
+	}
+	
+	public String toString() {
+		super.toString();
+		return "YoshiIslandTaxCalculator[taxRate=0.07]";
+	}
+	
+}
+/*public static void main(String[] args){
+TaxCalculator t = new YoshiIslandTaxCalculator();
+t.setTaxRate(0.07);
+t.getTaxRate();
+
+}
+
+public double calculateTax()
+	{
+		double tax=0;
+		double value = 0;
+		TaxCalculator t = new YoshiIslandTaxCalculator();
+		tax = t.getTaxRate();
+		
+		super.calculateTax(value);
+		if(value <= 100)
+		{return ((value*tax)+1);}
+		
+		else{return value*tax;}
+	}
+*/

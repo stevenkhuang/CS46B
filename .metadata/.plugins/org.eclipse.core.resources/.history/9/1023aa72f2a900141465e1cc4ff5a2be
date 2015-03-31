@@ -1,0 +1,9 @@
+package taxx;
+
+public class MarioWorldTaxCalculator {
+
+	public MarioWorldTaxCalculator() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

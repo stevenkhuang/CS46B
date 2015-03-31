@@ -1,0 +1,36 @@
+package taxx;
+public class TaxCalculator
+{
+	private double taxRate;
+	
+	public TaxCalculator(double taxRate)
+	{
+		this.taxRate = taxRate;
+	}
+	
+	public double getTaxRate(){ return this.taxRate; }
+	public void setTaxRate(double newRate){ this.taxRate = newRate; }
+	
+	/**
+	 * calculateTax. Return the tax on the dollar amount
+	 * in originalAmount.
+	 * 
+	 * @param originalAmount the cost to tax
+	 * @return the tax on that amount
+	 */
+	public double calculateTax(double originalAmount)
+	{
+		double price=originalAmount;
+		if (price>=100){
+			return ((price* taxRate) +1);
+		}
+		else{
+		return originalAmount * taxRate;}
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "TaxCalculator[taxRate=" + this.taxRate + "]";
+	}
+}

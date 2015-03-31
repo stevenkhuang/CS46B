@@ -1,0 +1,26 @@
+package taxx;
+public class TaxCalculator
+{
+	private double taxRate;
+	
+	public TaxCalculator(double taxrate)
+	{
+		this.taxRate = taxRate;
+	}
+	
+	public double getTaxRate(){ return this.taxRate; }
+	
+	public void setTaxRate(double newRate)
+	{ this.taxRate = newRate; }
+	
+	public double calculateTax(double originalAmount)
+	{
+		return originalAmount * taxRate;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "TaxCalculator[taxRate=" + this.taxRate + "]";
+	}
+}

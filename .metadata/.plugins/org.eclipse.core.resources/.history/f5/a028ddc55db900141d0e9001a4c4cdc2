@@ -1,0 +1,9 @@
+package HW2;
+
+public class SanJoseWarehouseFormatter implements OrderFormatter
+{
+	public String FormatOrder(int orderId, int productId, String productName, String department)
+	{
+		return (productName.replaceAll("\\s","") + productId + "-" + department + "-" + orderId);
+	}
+}

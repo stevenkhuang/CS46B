@@ -1,0 +1,9 @@
+package taxx;
+
+public class WarioLandTaxCalculator {
+
+	public WarioLandTaxCalculator() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,21 @@
+package taxx;
+
+public class YoshiIslandTaxCalculator extends TaxCalculator{
+	
+	
+	public YoshiIslandTaxCalculator(double taxRate) {
+		super(taxRate);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args){
+		TaxCalculator t = new TaxCalculator();
+		int price = 0;
+		if (price>100){
+			
+		}
+			
+		//t1.setTaxRate(0.7);
+	}
+	
+}
